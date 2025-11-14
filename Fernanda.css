@@ -1,0 +1,72 @@
+body {
+    font-family: fantasy;
+    text-align: center;
+    padding: 40px 0;
+    background-image:url('circo0.jpg');
+    background-size:cover;
+}
+
+.titulo {
+    font-size: 125px;
+    margin-top:50px;
+    color: white;
+    text-emphasis-color: black;
+    
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 400px;
+}
+
+.card {
+    width: 280px;
+    height: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #000;
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 0 25px black;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.card input {
+    display: none;
+}
+
+.frase {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: white;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .3s;
+}
+
+.card input:checked ~ .frase {
+    opacity: 1;
+    transform: translateY(0);
+}
